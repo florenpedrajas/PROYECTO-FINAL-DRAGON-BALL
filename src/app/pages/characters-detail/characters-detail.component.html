@@ -1,0 +1,15 @@
+<section class="detalles">
+  <div class="datos">
+    <h4>{{ myCharacter?.name }}</h4>
+    <img
+      class="imagen"
+      src="{{ myCharacter?.img }}"
+      alt="{{ myCharacter?.name }}"
+    />
+    <h3>Raza:{{ myCharacter?.race }}</h3>
+    <button (click)="deleteCharacter()">Borrar</button>
+    <button routerLink="/updateCharacter/{{ myCharacter?._id }}">
+      Modificar
+    </button>
+  </div>
+</section>

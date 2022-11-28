@@ -1,0 +1,11 @@
+
+<div class="card">
+  <div *ngFor="let item of myCharacters" >
+      <div class="datos">
+          <h4>{{item.name}}</h4>
+          <div class="imagen">
+              <img src="{{item?.image}}" alt="{{item?.name}}"/>
+          </div>
+          <button routerLink="/characters/{{ item.id }}">ver mas</button>
+      </div>
+

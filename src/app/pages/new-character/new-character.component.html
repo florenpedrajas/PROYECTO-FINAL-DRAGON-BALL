@@ -1,0 +1,22 @@
+<form class="form"  [formGroup]="characterForm" (ngSubmit)="onSubmit()" >
+<h1>Inserta tu personaje</h1>
+<label>
+  <h2> Nombre</h2>
+  <input type="text" formControlName="name">
+</label>
+<label>
+  <h2> Foto</h2>
+  <input type="file"  class="botonclickfoto" formControlName="img">
+</label>
+<label>
+  <h2> Raza</h2>
+  <select formControlName="race">
+  <option>human</option>
+  <option>saiyan</option>
+  <option>android</option>
+  <option>namekian</option>
+  <option>unknown</option>
+</select>
+</label>
+<br><br>
+<button>añadir</button>

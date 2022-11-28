@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+  <h1>Modifica Datos</h1>
+  <h2>Indica nombre</h2>
+  <input type="text" formControlName="name" />
+  <h2>Foto</h2>
+  <input type="file" formControlName="img" (change)="onFileChange($event)" />
+  <h2>Selecciona Raza</h2>
+  <select formControlName="race">
+    <option>Human</option>
+    <option>Saiyan</option>
+    <option>Android</option>
+    <option>Namekian</option>
+    <option>Unknown</option>
+  </select>
+  <br /><br />
+  <button>añadir</button>
+</form>

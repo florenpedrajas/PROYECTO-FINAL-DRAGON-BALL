@@ -1,0 +1,10 @@
+<a routerLink="/"> </a>
+<img class="logo"src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/677b7403-76bf-4871-b1eb-996331c62c03/d2n5c9w-7921a158-b07c-4f0f-9ebc-2d306d955acf.png/v1/fill/w_800,h_263,strp/logo___dragon_ball_manga_comic_spain_02_by_vicdbz_d2n5c9w-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjYzIiwicGF0aCI6IlwvZlwvNjc3Yjc0MDMtNzZiZi00ODcxLWIxZWItOTk2MzMxYzYyYzAzXC9kMm41Yzl3LTc5MjFhMTU4LWIwN2MtNGYwZi05ZWJjLTJkMzA2ZDk1NWFjZi5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.BOVyiP_8XTUizgoS5_W3UIlrPPu5QTP0XPN3QJCXxN0" alt="DRAGON BALL IMAGEN" />
+<nav class="navegador">
+  <a routerLink="">Home</a>
+  <a routerLink="characters">Personajes</a>
+  <a routerLink="newcharacter">Nuevo Personaje</a>
+  <a *ngIf="!authService.isLogged()" routerLink="login">Inicia Sesion</a>
+  <a *ngIf="!authService.isLogged()" routerLink="register">Registrate</a>
+  <button class="botonclick" *ngIf="authService.isLogged()" (click)="logout()" >Logout</button>
+</nav>
